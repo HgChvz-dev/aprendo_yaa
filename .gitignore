@@ -1,0 +1,35 @@
+cat > .gitignore << 'EOF'
+# ===== Laravel =====
+/aula/vendor/
+/aula/node_modules/
+/aula/storage/*.key
+/aula/storage/logs/
+/aula/storage/framework/cache/
+/aula/storage/framework/sessions/
+/aula/storage/framework/views/
+/aula/public/storage
+/aula/bootstrap/cache/*.php
+/aula/.env
+/aula/.env.*.local
+/aula/*.env.backup
+
+# ===== Frontend (React o estático) =====
+node_modules/
+dist/
+build/
+.cache/
+.tmp/
+
+# ===== Contenido pesado opcional (si luego quieres excluir por completo) =====
+# /cursos/  # <-- lo subiremos, pero por LFS
+
+# ===== SO / IDE =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== Logs =====
+npm-debug.log*
+yarn-error.log*
+EOF
