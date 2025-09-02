@@ -1,0 +1,18 @@
+# Aprendo Yaa
+
+Proyecto web para venta y gestión de cursos online.
+
+## Estructura
+- **Frontend (React estático)**: raíz de `public_html`
+- **Backend (Laravel)**: `public_html/aula`
+- **Cursos multimedia**: `public_html/cursos` (subidos con Git LFS)
+
+## Puesta en marcha (Backend - Laravel)
+```bash
+cd aula
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan storage:link
+php artisan serve
